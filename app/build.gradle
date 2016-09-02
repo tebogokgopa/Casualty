@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'Key'
+            keyPassword 'password'
+            storeFile file('C:/Users/Quest/AndroidStudioProjects/Casualty/Keys.jks')
+            storePassword 'password'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        applicationId "tebogokgopa.casualty"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        signingConfig signingConfigs.config
+    }
+    packagingOptions {
+        // pickFirst  'META-INF/license.txt'
+        pickFirst 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'org.springframework.android:spring-android-rest-template:2.0.0.M3'
+}
+

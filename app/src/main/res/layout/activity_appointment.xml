@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="tebogokgopa.casualty.Activities.PatientActivities.AppointmentActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        android:id="@+id/submitAppButton"
+        android:width="300dp"
+        android:layout_above="@+id/viewAppointmentButton"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel Appointment"
+        android:id="@+id/ExitAppButton"
+        android:width="300dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/viewAppointmentButton"
+        android:layout_alignStart="@+id/viewAppointmentButton" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:hint="Appointment date"
+        android:id="@+id/appDate"
+        android:layout_above="@+id/appTime"
+        android:layout_alignLeft="@+id/appTime"
+        android:layout_alignStart="@+id/appTime" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/appTime"
+        android:hint="Appointment Time"
+        android:layout_above="@+id/NameApointment"
+        android:layout_alignLeft="@+id/NameApointment"
+        android:layout_alignStart="@+id/NameApointment" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Appointment"
+        android:id="@+id/textView4"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/NameApointment"
+        android:hint="Patient Name"
+        android:layout_above="@+id/nameDoctor"
+        android:layout_alignLeft="@+id/nameDoctor"
+        android:layout_alignStart="@+id/nameDoctor" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Appointments"
+        android:id="@+id/viewAppointmentButton"
+        android:width="300dp"
+        android:layout_above="@+id/ExitAppButton"
+        android:layout_alignLeft="@+id/submitAppButton"
+        android:layout_alignStart="@+id/submitAppButton" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/nameDoctor"
+        android:hint="Doctor Name"
+        android:layout_above="@+id/submitAppButton"
+        android:layout_alignLeft="@+id/submitAppButton"
+        android:layout_alignStart="@+id/submitAppButton"
+        android:layout_marginBottom="38dp" />
+</RelativeLayout>
