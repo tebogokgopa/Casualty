@@ -9,12 +9,11 @@ import tebogokgopa.casualty.Domain.Appointment;
  */
 public class AppointmentFactory {
 
-    public static Appointment getAppointment(String date,String time,String doctor,String patient){
+    public static Appointment getAppointment(String date,String time,String doctor){
         Appointment appointment = new Appointment.Builder()
                 .getAppDate(date)
                 .getAppTime(time)
                 .getDocName(doctor)
-                .getPatientName(patient)
                 .build();
        return appointment;
     }

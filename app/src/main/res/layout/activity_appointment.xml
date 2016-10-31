@@ -46,9 +46,9 @@
         android:ems="10"
         android:id="@+id/appTime"
         android:hint="Appointment Time"
-        android:layout_above="@+id/NameApointment"
-        android:layout_alignLeft="@+id/NameApointment"
-        android:layout_alignStart="@+id/NameApointment" />
+        android:layout_above="@+id/nameDoctor"
+        android:layout_alignLeft="@+id/nameDoctor"
+        android:layout_alignStart="@+id/nameDoctor" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -58,17 +58,6 @@
         android:id="@+id/textView4"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/NameApointment"
-        android:hint="Patient Name"
-        android:layout_above="@+id/nameDoctor"
-        android:layout_alignLeft="@+id/nameDoctor"
-        android:layout_alignStart="@+id/nameDoctor" />
 
     <Button
         android:layout_width="wrap_content"

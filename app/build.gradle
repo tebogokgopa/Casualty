@@ -15,8 +15,8 @@ android {
         applicationId "tebogokgopa.casualty"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "3.0"
         signingConfig signingConfigs.config
     }
     packagingOptions {
@@ -40,5 +40,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'org.springframework.android:spring-android-rest-template:2.0.0.M3'
+    compile files('libs/gson-2.2.2.jar')
 }
 

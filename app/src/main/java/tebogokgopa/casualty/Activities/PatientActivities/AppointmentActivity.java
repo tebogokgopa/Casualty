@@ -20,7 +20,7 @@ public class AppointmentActivity extends AppCompatActivity {
 
     AppointmentService repo = new AppointmentServicesImpl();
     Button submit,cancel,view;
-    EditText appdate,apptime,docname,patientName;
+    EditText appdate,apptime,docname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +35,10 @@ public class AppointmentActivity extends AppCompatActivity {
                 appdate = (EditText)findViewById(R.id.appDate);
                 apptime = (EditText)findViewById(R.id.appTime);
                 docname = (EditText)findViewById(R.id.nameDoctor);
-                patientName= (EditText)findViewById(R.id.NameApointment);
+                //patientName= (EditText)findViewById(R.id.NameApointment);
 
                 try {
-                    Appointment users = AppointmentFactory.getAppointment(appdate.getText().toString(),apptime.getText().toString(),docname.getText().toString(),patientName.getText().toString());
+                    Appointment users = AppointmentFactory.getAppointment(appdate.getText().toString(),apptime.getText().toString(),docname.getText().toString());
                     repo.save(users);
                     Toast.makeText(getApplicationContext(), "Appointment saved ", Toast.LENGTH_LONG).show();
                     Intent cancelIntent = new Intent(v.getContext(), PatientMain.class);

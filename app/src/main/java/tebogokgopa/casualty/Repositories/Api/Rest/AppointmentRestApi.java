@@ -17,7 +17,7 @@ import tebogokgopa.casualty.Repositories.Api.RestApi;
  */
 public class AppointmentRestApi implements RestApi<Appointment,Long> {
 
-    final String BASE_URL = "http://148.100.5.61/";
+    final String BASE_URL = "https://casultybackend.herokuapp.com";
 
     final HttpHeaders requestHeaders = RestMethods.getHeaders();
     final RestTemplate restTemplate = RestMethods.getRestTemplate();

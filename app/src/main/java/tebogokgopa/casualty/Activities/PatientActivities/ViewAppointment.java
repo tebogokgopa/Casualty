@@ -25,7 +25,7 @@ public class ViewAppointment extends AppCompatActivity {
 
     TableLayout tl;
     TableRow tr;
-    TextView companyTV,valueTV;
+    TextView valueTV;
     AppointmentService service = new AppointmentServicesImpl();
     List<Appointment> appointments;
 
@@ -95,15 +95,6 @@ public class ViewAppointment extends AppCompatActivity {
         date.setPadding(5, 5, 5, 0);
         date.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
         tr.addView(date); // Adding textView to tablerow.
-
-        /** Creating another textview **/
-        TextView quantity = new TextView(this);
-        quantity.setText("Patient");
-        quantity.setTextColor(Color.GRAY);
-        quantity.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
-        quantity.setPadding(5, 5, 5, 0);
-        quantity.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
-        tr.addView(quantity); // Adding textView to tablerow.
 
         // Add the TableRow to the TableLayout
         tl.addView(tr, new LayoutParams(
@@ -212,16 +203,6 @@ public class ViewAppointment extends AppCompatActivity {
             valueTV.setPadding(5, 5, 5, 5);
             valueTV.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
             tr.addView(valueTV); // Adding textView to tablerow.
-
-            /** Creating another textview **/
-            valueTV = new TextView(this);
-            valueTV.setText(appointments.get(i).getPatientName().toString());
-            valueTV.setTextColor(Color.GRAY);
-            valueTV.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
-            valueTV.setPadding(5, 5, 5, 5);
-            valueTV.setTypeface(Typeface.DEFAULT, Typeface.BOLD);
-            tr.addView(valueTV); // Adding textView to tablerow.
-
 
             // Add the TableRow to the TableLayout
             tl.addView(tr, new LayoutParams(

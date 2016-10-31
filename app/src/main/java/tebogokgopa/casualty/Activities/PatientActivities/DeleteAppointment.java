@@ -45,30 +45,17 @@ public class DeleteAppointment extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                // Clear
-                //EditText c1 = (EditText) findViewById(R.id.editText5);
-                //c1.getText().clear();
 
                 appointment = null;
-
-
                 try {
-
-
                     EditText id = ((EditText) findViewById(R.id.editText5));
 
                     if (!(id.getText().toString().isEmpty())) {
-
-
                         appointment = service.findById(Long.parseLong(id.getText().toString()));
-
                         if (appointment != null) {
-
-
                             EditText code = (EditText) findViewById(R.id.editText5);
                             code.setText(appointment.getId().toString());
                         }
-
                     }
 
                 } catch (Exception e) {
@@ -76,7 +63,6 @@ public class DeleteAppointment extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Appointment does not exist\n"
                             , Toast.LENGTH_SHORT).show();
                 }
-
             }
 
             @Override
@@ -97,10 +83,6 @@ public class DeleteAppointment extends AppCompatActivity {
 
                 // Setting Dialog Message
                 alertDialog.setMessage("Are you sure you want delete Appointment?");
-
-                // Setting Icon to Dialog
-                //alertDialog.setIcon(R.drawable.delete);
-
                 // Setting Positive "Yes" Button
                 alertDialog.setPositiveButton("YES", new DialogInterface.OnClickListener() {
 
@@ -117,7 +99,6 @@ public class DeleteAppointment extends AppCompatActivity {
                                         .getAppDate(appointment.getAppDate())
                                         .getAppTime(appointment.getAppTime())
                                         .getDocName(appointment.getDocName())
-                                        .getPatientName(appointment.getPatientName())
                                         .build();
 
                                 String response = service.delete(appointmentDel);
